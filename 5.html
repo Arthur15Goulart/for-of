@@ -7,10 +7,15 @@
 
     //ENTRADA
     let listaDeNomes = ["Amanda", "Eduardo", "Fábio", "Evelin", "César", "José", "Ivo", "Eva", "Otávio", "Inez", "Osmar", "Ulisses"];
+    let vogais = ["A", "E", "I", "O", "U"]
+    let nomesVogal = []
     //PROCESSAMENTO
     for (item of listaDeNomes) {
-        
+       let transformar = item.charAt(0)
+       if (vogais.includes(transformar)) {
+        nomesVogal.push(item)
+       }
     }
     //SAÍDA
-
+    alert (nomesVogal.sort().join(" - "))
 </script>
