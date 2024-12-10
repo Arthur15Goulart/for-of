@@ -5,17 +5,27 @@
     // let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
     //Identifique todos os nomes que contém "João" em qualquer parte do nome e separe-os em uma lista. Apresente a lista ao final do programa. Considere que poderão haver "Joãos" sem ~ (til).
 
-    //ENTRADA
+    // //ENTRADA
+    // let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    // let resultadoDeJuntar1 = listaDeNomes.splice(0, 1, 0);
+    // let resultadoDeJuntar2 = listaDeNomes.splice(2, 1, 0);
+    // let resultadoDeJuntar3 = listaDeNomes.splice(4, 3, 0);
+    // let joaosJuntos = resultadoDeJuntar3.concat(resultadoDeJuntar2, resultadoDeJuntar1);
+    // let joaos = []
+    // //PROCESSAMENTO
+    // for (let joao of joaosJuntos) {
+    //     joaos.push(joao)
+    // }
+    // //SAÍDA
+    // alert(joaos)
     let listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
-    let resultadoDeJuntar1 = listaDeNomes.splice(0, 1, 0)
-    let resultadoDeJuntar2 = listaDeNomes.splice(2, 1, 0)
-    let resultadoDeJuntar3 = listaDeNomes.splice(4, 3, 0)
-    let joaosJuntos = resultadoDeJuntar3.concat(resultadoDeJuntar2, resultadoDeJuntar1)
-    let joaos = []
-    //PROCESSAMENTO
-    for (let joao of joaosJuntos) {
-        joaos.push(joao)
+
+    let nomesComJoao = [];
+    
+    for (let nome of listaDeNomes) {
+        if (/joão | joao/i.test(nome)) {
+            nomesComJoao.push(nome);
+        }
     }
-    //SAÍDA
-    alert(joaos)
+    document.write("<b> Nomes que contêm 'João' ou 'Joao': </b>" + nomesComJoao.join(", "))
 </script>
